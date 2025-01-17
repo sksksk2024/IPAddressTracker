@@ -1,13 +1,60 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="font-rubik no-js">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta
+      name="description"
+      content="This api link shortener gives you the oportunity to share your projects more easily to your friends and to your future companies"
+    />
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+
+    <title>IP Address Tracker</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Display:ital@0;1&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .noscript {
+        display: block;
+        opacity: 1;
+      }
+      html.js-enabled .noscript {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/, '') +
+        ' js-enabled';
+    </script>
   </head>
-  <body>
+  <body class="z-10 select-none bg-white relative">
+    <div
+      class="noscript"
+      style="
+        color: black;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        padding: 1rem;
+        background-color: red;
+        position: absolute;
+        top: 15%;
+        left: 11%;
+        max-width: 37rem;
+        border: 10px solid black;
+        border-radius: 1rem;
+      "
+    >
+      You need to enable JavaScript to run this app!
+    </div>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
