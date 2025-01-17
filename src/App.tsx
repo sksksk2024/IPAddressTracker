@@ -1,9 +1,13 @@
+import img1 from './images/icon-location.svg';
+import { Header } from './components/Header';
+
 function App() {
   return (
     <>
-      <div className="">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </div>
+      <main>
+        <Header />
+        <img src={img1} alt="" />
+      </main>
     </>
   );
 }

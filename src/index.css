@@ -50,6 +50,16 @@ body {
   overflow-y: scroll;
 }
 
+header {
+  background-image: url('./images/pattern-bg-mobile.png');
+}
+
+@media (min-width: 48em) {
+  header {
+    background-image: url('./images/pattern-bg-desktop.png');
+  }
+}
+
 /* Loader */
 .container {
   height: 5vh;
