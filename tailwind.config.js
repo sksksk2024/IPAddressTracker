@@ -4,6 +4,7 @@ const { default: daisyui } = require('daisyui');
 module.exports = {
   content: [
     './public/**/*.html',
+    './index.html',
     './src/**/*.{js,jsx,ts,tsx,svg}',
     './src/**/*.svg',
   ],
