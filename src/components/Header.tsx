@@ -71,6 +71,7 @@ export function Header() {
           <button
             className="bg-black p-22.08P rounded-r-10BR cursor-pointer hover:bg-very-dark-gray z-0"
             onClick={handleSearch}
+            id="searchButton"
             aria-label="Search for IP Address"
           >
             <img src={arrow} alt="" />
