@@ -68,6 +68,10 @@ header {
   }
 }
 
+main {
+  background: url('./images/icon-location.svg') center center/cover no-repeat;
+}
+
 /* Loader */
 .container {
   height: 5vh;

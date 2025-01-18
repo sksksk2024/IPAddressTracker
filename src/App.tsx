@@ -1,11 +1,11 @@
-import img1 from './images/icon-location.svg';
 import { Header } from './components/Header';
+import { Main } from './components/Main';
 
 function App() {
   return (
     <>
       <Header />
-      <img src={img1} alt="" />
+      <Main />
     </>
   );
 }
