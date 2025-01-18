@@ -39,7 +39,7 @@ export function Header() {
         `https://api.timezonedb.com/v2.1/get-time-zone?key=D6PQFQ4473HK&format=json&by=zone&zone=${ipData.timezone}`
       );
 
-      ipData.utcOffset = (tzRes.data.gmtOffset / 3600).toFixed(2); // Convert seconds hours
+      ipData.utcOffset = (tzRes.data.gmtOffset / 3600).toFixed(2); // Convert seconds to hours
 
       // Update State
       setData(ipData);
@@ -56,7 +56,7 @@ export function Header() {
 
         <label
           htmlFor="ipAddress"
-          aria-label="Enter any IP address and we will show you where is its location"
+          aria-label="Enter any IP address and we will show you where its location is"
           className="flex justify-center items-center max-w-container-600 w-screen px-16P sm:px-0"
         >
           <input
@@ -68,12 +68,13 @@ export function Header() {
             onChange={(e) => setIp(e.target.value)}
           />
 
-          <img
-            src={arrow}
+          <button
             className="bg-black p-22.08P rounded-r-10BR cursor-pointer hover:bg-very-dark-gray z-0"
-            alt="Enter your IP Address"
             onClick={handleSearch}
-          />
+            aria-label="Search for IP Address"
+          >
+            <img src={arrow} alt="" />
+          </button>
         </label>
 
         {data && (
