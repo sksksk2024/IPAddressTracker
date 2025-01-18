@@ -4,10 +4,8 @@ import { Header } from './components/Header';
 function App() {
   return (
     <>
-      <main>
-        <Header />
-        <img src={img1} alt="" />
-      </main>
+      <Header />
+      <img src={img1} alt="" />
     </>
   );
 }

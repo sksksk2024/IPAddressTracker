@@ -50,13 +50,21 @@ body {
   overflow-y: scroll;
 }
 
+.container {
+  max-width: 90rem;
+  min-width: 20rem;
+  margin: 0 auto;
+}
+
 header {
-  background-image: url('./images/pattern-bg-mobile.png');
+  background: url('./images/pattern-bg-mobile.png') center center/cover
+    no-repeat;
 }
 
 @media (min-width: 48em) {
   header {
-    background-image: url('./images/pattern-bg-desktop.png');
+    background: url('./images/pattern-bg-desktop.png') center center/cover
+      no-repeat;
   }
 }
 
