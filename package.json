@@ -7,7 +7,7 @@
     "dev": "vite --host 0.0.0.0 --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "serve -s dist -l 3000",
+    "start": "serve -s dist -l 8080",
     "test": "vitest --coverage"
   },
   "dependencies": {

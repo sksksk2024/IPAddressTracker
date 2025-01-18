@@ -9,8 +9,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    rollupOptions: {
-      input: 'src/main.tsx', // Ensure the correct entry point is used
-    },
   },
 });
