@@ -9,6 +9,7 @@ type IPData = {
   country: string;
   timezone: string;
   isp: string;
+  utcOffset: string;
 };
 
 export function Header() {
@@ -21,15 +22,27 @@ export function Header() {
     }
 
     try {
+      // Fetch First API(ipwhois)
       const res = await axios.get(`https://ipwhois.app/json/${ip}`);
-      setData({
+      const ipData = {
         ip: res.data.ip,
         city: res.data.city,
         region: res.data.region,
         country: res.data.country,
         timezone: res.data.timezone,
         isp: res.data.isp,
-      });
+        utcOffset: '',
+      };
+
+      // Fetch timezone data using TimeZoneDB
+      const tzRes = await axios.get(
+        `https://api.timezonedb.com/v2.1/get-time-zone?key=D6PQFQ4473HK&format=json&by=zone&zone=${ipData.timezone}`
+      );
+
+      ipData.utcOffset = (tzRes.data.gmtOffset / 3600).toFixed(2); // Convert seconds hours
+
+      // Update State
+      setData(ipData);
     } catch (error) {
       console.error('Error fetching IP data:', error);
       alert('Failed to fetch data. Please try again.');
@@ -49,11 +62,12 @@ export function Header() {
           <input
             type="text"
             id="ipAddress"
-            className="w-full text-black p-16P rounded-l-10BR bg-white cursor-pointer z-20"
+            className="w-full text-black p-16P rounded-l-10BR bg-white cursor-pointer z-20 focus:outline-none focus:ring-2 focus:ring-blue-600"
             placeholder="Search for any IP address or domain"
             value={ip}
             onChange={(e) => setIp(e.target.value)}
           />
+
           <img
             src={arrow}
             className="bg-black p-22.08P rounded-r-10BR cursor-pointer hover:bg-very-dark-gray z-0"
@@ -88,7 +102,7 @@ export function Header() {
                   Timezone
                 </h2>
                 <p className="font-semibold text-black text-lg">
-                  {data.timezone}
+                  UTC {data.utcOffset}
                 </p>
               </div>
             </div>

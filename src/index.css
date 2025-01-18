@@ -69,7 +69,8 @@ header {
 }
 
 main {
-  background: url('./images/icon-location.svg') center center/cover no-repeat;
+  background: url('./images/pexels-n-voitkevich-7235804.jpg') center
+    center/cover no-repeat;
 }
 
 /* Loader */
