@@ -30,30 +30,26 @@
         opacity: 0;
       }
     </style>
+    <!-- Google Tag Manager -->
     <script>
-      document.documentElement.className =
-        document.documentElement.className.replace(/\bno-js\b/, '') +
-        ' js-enabled';
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MFNW287Z');
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body class="z-10 select-none relative">
-    <div
-      class="noscript"
-      style="
-        color: black;
-        font-weight: bold;
-        font-size: 3rem;
-        text-align: center;
-        padding: 1rem;
-        background-color: red;
-        position: absolute;
-        top: 15%;
-        left: 11%;
-        max-width: 37rem;
-        border: 10px solid black;
-        border-radius: 1rem;
-      "
-    >
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFNW287Z"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
       You need to enable JavaScript to run this app!
     </div>
     <div class="flex flex-col justify-center items-center" id="root"></div>
